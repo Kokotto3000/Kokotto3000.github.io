@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    min-height: 600px;
+    min-width: 900px;
+    margin: 0 auto;
+    font-family: 'Bangers', cursive;
+}
+
+canvas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sound{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 400px;
+    transform: translate(-150%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: flex-start;
+    z-index:2;
+}
+
+#sound{
+    opacity: 0.7;
+    margin: 20px;
+    display: block;
+    width: 30px;
+    height : 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#end-screen{
+    color: white;
+    font-size: 1.25em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width : 600px;
+    height: 400px;
+    place-items: center;
+    display: none;
+    text-align: center;
+    /*display: grid;*/
+    background-color: rgba(0,0,0,1);
+    animation: 20s linear endBackground;
+
+}
+
+@keyframes endBackground {
+    from {
+        background-color: rgba(0,0,0,0);
+    }
+  
+    to {
+        background-color: rgba(0,0,0,1);
+    }
+  }
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#restart{
+    cursor: pointer;
+}
+
+#start-screen{
+    color: white;
+    font-size: 1.25em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width : 600px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.5);
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    animation: 3s linear startBackground;
+}
+
+@keyframes startBackground {
+    from {
+        background-color: rgba(0,0,0,1);
+    }
+  
+    to {
+        background-color: rgba(0,0,0,0.5);
+    }
+  }
+
+#start{
+    cursor: pointer;
+    font-size: 1.25em;
+    color : #FFF;
+    text-align: center;
+    display: block;
+}
